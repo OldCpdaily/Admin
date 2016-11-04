@@ -20,6 +20,7 @@ class NextServer extends HttpServer {
   override def configureHttp(router: HttpRouter) {
     router
       .filter[CommonFilters]
+      .add[OptionController]
       .add[AdminUserFilters,RawlerExcController]
       .add[AuthController]
       .add[FeedController]
