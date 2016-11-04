@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>NEXT-登录</title>
+    <link rel="icon" sizes="180x180" href="../img/icon.-180.png">
+    <link rel="stylesheet" href="http://127.0.0.1:8888/v2/statics/css/login.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8888/v2/statics/css/contentManagement.css">
+    <link rel="stylesheet" href="http://res.wisedu.com/bower_components/material-design-iconic-font/css/material-design-iconic-font.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="sys-name">NEXT - 今日校园</div>
+        <div class="login-box">
+            <div class="bh-card bh-card-lv1 defaultcard login-card">
+                <p class="title" style="display: none;">请填写用户名与密码!</p>
+                <header>
+                    <p>账号登录</p>
+                </header>
+                <section>
+                    <form class="bh-form-horizontal  bh-form-lg">
+                        <div class="bh-row">
+                            <div class="bh-form-group bh-required">
+                                <i class="md-timer-auto md"></i>
+                                <input type="text" id="name" class="bh-form-control" placeholder="用户名">
+                                <div class="bh-text-caption bh-color-warning"></div>
+                            </div>
+                        </div>
+                        <div class="bh-row">
+                            <div class="bh-form-group bh-required">
+                                <i class="md-https md"></i>
+                                <input type="password" id="password" class="bh-form-control" placeholder="密码">
+                            </div>
+                        </div>
+                        <div class="bh-row">
+                            <div class="bh-form-group">
+                                <div class="bh-checkbox">
+                                    <!--<label>-->
+                                        <!--<input type="checkbox" value="">-->
+                                        <!--<i class="bh-choice-helper"></i>-->
+                                        <!--一周内免登陆-->
+                                    <!--</label>-->
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <footer>
+                    <button class="bh-btn bh-btn-primary bh-btn-block" id="loginBtn">登录</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://res.wisedu.com/fe_components/jquery-1.11.3.js"></script>
+<script src="http://127.0.0.1:8888/v2/statics/js/jquery.cookie.js"></script>
+<script src="http://127.0.0.1:8888/v2/statics/js/main.js"></script>
+<script src="http://127.0.0.1:8888/v2/statics/js/login.js"></script>
+</html>

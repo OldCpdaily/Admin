@@ -1,0 +1,84 @@
+{
+  "code": "0",
+  "datas": {
+    "tagList": {
+      "pageNumber": 2,
+      "totalSize": 40,
+      "pageSize": 2,
+      "rows":[
+        {
+          "tagId": "1001",
+          "tagName": "重要通知",
+          "tagType": "重要通知",
+          "tagLevel": "系统级",
+          "contentNum": 200,
+          "enabled": "启用",
+          "isShown": "显示",
+          "createTime": "2016-05-05 12:12:12",
+          "createUser": "用户昵称",
+          "updateTime": "2016-05-09 12:12:12"
+        },
+        {
+          "tagId": "1001",
+          "tagName": "重要通知",
+          "tagType": "重要通知",
+          "tagLevel": "系统级",
+          "contentNum": 200,
+          "enabled": "启用",
+          "isShown": "显示",
+          "createTime": "2016-05-05 12:12:12",
+          "createUser": "用户昵称",
+          "updateTime": "2016-05-09 12:12:12"
+        },
+        {
+          "tagId": "1001",
+          "tagName": "重要通知",
+          "tagType": "重要通知",
+          "tagLevel": "系统级",
+          "contentNum": 200,
+          "enabled": "启用",
+          "isShown": "显示",
+          "createTime": "2016-05-05 12:12:12",
+          "createUser": "用户昵称",
+          "updateTime": "2016-05-09 12:12:12"
+        },
+        {
+          "tagId": "1001",
+          "tagName": "重要通知",
+          "tagType": "重要通知",
+          "tagLevel": "系统级",
+          "contentNum": 200,
+          "enabled": "启用",
+          "isShown": "显示",
+          "createTime": "2016-05-05 12:12:12",
+          "createUser": "用户昵称",
+          "updateTime": "2016-05-09 12:12:12"
+        },
+        {
+          "tagId": "1001",
+          "tagName": "重要通知",
+          "tagType": "重要通知",
+          "tagLevel": "系统级",
+          "contentNum": 200,
+          "enabled": "启用",
+          "isShown": "显示",
+          "createTime": "2016-05-05 12:12:12",
+          "createUser": "用户昵称",
+          "updateTime": "2016-05-09 12:12:12"
+        },
+        {
+          "tagId": "1001",
+          "tagName": "重要通知",
+          "tagType": "重要通知",
+          "tagLevel": "系统级",
+          "contentNum": 200,
+          "enabled": "启用",
+          "isShown": "显示",
+          "createTime": "2016-05-05 12:12:12",
+          "createUser": "用户昵称",
+          "updateTime": "2016-05-09 12:12:12"
+        }
+      ]
+    }
+  }
+}

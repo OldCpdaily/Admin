@@ -1,0 +1,19 @@
+{
+  "code": "0",
+  "datas": {
+    "LuckyDrawList": {
+      "pageNumber": 2,
+      "totalSize": 40,
+      "pageSize": 2,
+      "rows":[
+        {
+          "luckyDrawId": "1001",
+          "luckyDrawTitle": "重要通知",
+          "contentId": "",
+          "luckyDrawUrl":"http://www.baidu.com",
+          "winUrl": "http://www.baidu.com"
+        }
+      ]
+    }
+  }
+}

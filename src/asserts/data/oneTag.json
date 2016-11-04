@@ -1,0 +1,14 @@
+{
+  "datas": {
+    "tagId": "1001",
+    "tagName": "重要通知",
+    "tagType": "1",
+    "tagLevel": "1",
+    "enabled": "1",
+    "isShown": "0",
+    "description": "描述",
+    "extendInfo": "扩展信息"
+  },
+  "status": "success",
+  "errorMsg": ""
+}

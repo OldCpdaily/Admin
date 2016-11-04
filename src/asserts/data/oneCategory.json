@@ -1,0 +1,16 @@
+{
+  "datas": {
+    "categoryId": "123123",
+    "categoryName": "短视频",
+    "categoryDescription": "分类描述",
+    "categoryDisplayType": "混排",
+    "relation": "竖图",
+    "imgUrlSmall": "../img/123.png",
+    "imgUrlBig": "../img/123.png",
+    "contentUUID": "关联资讯UUID"
+  },
+  "status": "success",
+  "errorMsg": ""
+
+}
+

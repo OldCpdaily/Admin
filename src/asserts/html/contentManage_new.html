@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="overflow: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>NEXT-内容管理</title>
+    <link rel="icon" sizes="180x180" href="../img/icon.-180.png">
+    <link rel="stylesheet" href="http://res.wisedu.com/fe_components/jqwidget/blue/bh.min.css" id="bhThemes">
+    <link rel="stylesheet" href="http://res.wisedu.com/fe_components/iconfont/iconfont.css">
+    <link rel="stylesheet" href="http://res.wisedu.com/fe_components/jqwidget/blue/bh-scenes.min.css" id="bhScenceThemes">
+    <link rel="stylesheet" href="../css/contentManagement.css">
+
+    <style>
+        .bh-headerBar-menu,
+        .bh-headerBar-logo {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+</header>
+
+<main>
+    <article bh-layout-role="single">
+        <h2>内容管理</h2>
+        <section class="scenes-cb-Container bh-ph-16">
+                <div id="advancedQueryPlaceholder"></div>
+                <div class="add-btn-box">
+                    <a href="javascript:void(0);" id="batchDelete" class="bh-btn bh-btn-primary bh-btn-small disable" disabled>批量删除</a>
+                    <a href="javascript:void(0);" id="batchTurnOn" class="bh-btn bh-btn-primary bh-btn-small disable" disabled>批量启用</a>
+                    <a href="javascript:void(0);" id="batchTurnOff" class="bh-btn bh-btn-primary bh-btn-small disable" disabled>批量停用</a>
+                    <a href="addContent_new.html" target="_blank" style="float: right;"  class="bh-btn bh-btn-primary bh-btn-small">新增资讯</a>
+                </div>
+            <!--</div>-->
+            <div id="tableContainer"></div>
+        </section>
+    </article>
+</main>
+<footer bh-footer-role="footer" class="bh-footer">
+</footer>
+
+
+<script src="http://res.wisedu.com/fe_components/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="http://res.wisedu.com/bower_components/waves/waves.min.js"></script>
+<!-- <script src="../core/utils/bh_utils.js"></script> -->
+<script src="http://res.wisedu.com/fe_components/bh_utils.js"></script>
+<!-- <script src="../public/js/bh.js"></script> -->
+<script src="http://res.wisedu.com/fe_components/bh.map.js"></script>
+<script src="http://res.wisedu.com/fe_components/jqwidget/jqxwidget.min.js"></script>
+<script src="http://res.wisedu.com/bower_components/jqwidgets/jqwidgets/jqxtreegrid.js"></script>
+<script src="http://res.wisedu.com/fe_components/jqwidget/globalize.js"></script>
+<!-- <script src="http://res.wisedu.com/fe_components/jqwidget/globalize.culture.zh-CN.js"></script> -->
+<script type="text/javascript"
+        src="http://res.wisedu.com/bower_components/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
+<script type="text/javascript"
+        src="http://res.wisedu.com/bower_components/gsap/src/minified/easing/EasePack.min.js"></script>
+<script type="text/javascript" src="http://res.wisedu.com/bower_components/gsap/src/minified/TweenLite.min.js"></script>
+<script src="http://res.wisedu.com/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+<script src="http://res.wisedu.com/fe_components/emap.js"></script>
+<script>
+    $(function () {
+        //浏览器滚动条美化
+        $("html").niceScroll({zindex: 99999});
+
+        //初始化页头
+        var headData = {
+            "showAsideNav": true, //显示侧边栏导航
+            "title": "NEXT",
+            "icons": ["icon-apps", "icon-settings"] //传入的字体图标, 换肤图标不需要传，默认就有
+            //显示在右侧的用户头像
+            //头部的导航菜单
+            //title：标题，active：表示该标题选中(必须有一个为true)，href：该标题的链接地址（可选）
+//            "nav": [
+//                {"title": "填写申请表", "className": "firstFlag", "attribute": [{"key": "data-flag", "value": "nav"}]},
+//                {"title": "考核进度", "active": true},
+//                {"title": "考核历史"}
+//            ],
+        };
+        $('header').bhHeader(headData);
+
+        //页脚初始化
+        $("footer").bhFooter({
+            text: "版权信息：© 2015 江苏金智教育信息股份有限公司 苏ICP备10204514号"
+        });
+
+        //给外层的container添加最小高度
+        BH_UTILS.setContentMinHeight($("body").children("main").children("article"));
+        //给咨询页面的container添加最小高度，时调整的弹出框能正确显示
+        BH_UTILS.setContentMinHeight($("div.scenes-cb-topContainer"));
+
+        //左侧边栏列表初始化
+        asideNavInit();
+
+    });
+</script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/contentManage_new.js"></script>
+<div id="bh-eventWindow"></div>
+</body>
+</html>

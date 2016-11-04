@@ -1,0 +1,165 @@
+{
+  "models": [
+    {
+      "name": "content_list",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "uuid",
+          "dataType": "String",
+          "caption": "uuid",
+          "dataSize": 40,
+          "grid.width": "5%"
+        },
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "标题",
+          "dataSize": 100,
+          "grid.width": "25%"
+        },
+        {
+          "name": "content_html_url",
+          "dataType": "String",
+          "caption": "资讯预览地址",
+          "dataSize": 100,
+          "hidden": true
+        },
+        {
+          "name": "origin_time",
+          "dataType": "String",
+          "caption": "原始发布时间",
+          "dataSize": 20,
+          "grid.width": "12%"
+        },
+        {
+          "name": "read_num",
+          "dataType": "int",
+          "caption": "阅读数",
+          "dataSize": 20,
+          "grid.width": "5%"
+        },
+        {
+          "name": "source",
+          "dataType": "String",
+          "caption": "来源",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "category",
+          "dataType": "String",
+          "caption": "分类",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "display_type",
+          "dataType": "String",
+          "caption": "展现类型",
+          "dataSize": 20,
+          "grid.width": "7%"
+        },
+        {
+          "name": "home_recommend",
+          "dataType": "boolean",
+          "caption": "首页推荐",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "state",
+          "dataType": "boolean",
+          "caption": "状态",
+          "dataSize": 20,
+          "grid.width": "5%"
+        }
+      ]
+    },
+    {
+      "name": "sourceList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "mediaUUId",
+          "dataType": "String",
+          "caption": "媒体号UUID",
+          "dataSize": 40,
+          "hidden": true
+        },
+        {
+          "name": "headPhoto",
+          "dataType": "String",
+          "caption": "头像",
+          "dataSize": 20,
+          "grid.width": "5%"
+        },
+        {
+          "name": "mediaName",
+          "dataType": "String",
+          "caption": "名称",
+          "dataSize": 40,
+          "grid.width": "20%"
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "wxId",
+          "dataType": "String",
+          "caption": "ID",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "address",
+          "dataType": "String",
+          "caption": "地址",
+          "dataSize": 100,
+          "grid.width": "20%"
+        },
+        {
+          "name": "category",
+          "dataType": "int",
+          "caption": "分类",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "crawlerState",
+          "dataType": "String",
+          "caption": "爬虫状态",
+          "dataSize": 20,
+          "grid.width": "10%"
+        }
+      ]
+    },
+    {
+      "name": "categoryList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "categoryId",
+          "dataType": "String",
+          "caption": "分类UUID",
+          "dataSize": 40,
+          "grid.width": "25%"
+        },
+        {
+          "name": "categoryName",
+          "dataType": "String",
+          "caption": "分类名称",
+          "dataSize": 40,
+          "grid.width": "50%"
+        }
+      ]
+    }
+  ],
+  "routes": {},
+  "code": "0",
+  "datas": {}
+}

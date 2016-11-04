@@ -1,0 +1,30 @@
+{
+  "code": "0",
+  "datas": {
+    "sysTypeList": {
+      "pageNumber": 2,
+      "totalSize": 40,
+      "pageSize": 2,
+      "rows":[
+          {
+            "value": "1001",
+            "display": "重要通知",
+            "typeId": "1111",
+            "typeName": "标签类型"
+          },
+          {
+            "value": "1002",
+            "display": "视频",
+            "typeId": "1112",
+            "typeName": "内容类型"
+          },
+          {
+            "value": "1003",
+            "display": "学校类型",
+            "typeId": "1113",
+            "typeName": "限制类型"
+          }
+        ]
+      }
+    }
+  }

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+.note-editor.note-frame.fullscreen .note-editable {
+    max-width: 740px;
+    margin:  0 auto;
+}
+
+.note-editing-area {
+    font-family: "PingFangSC-Light", "sans-serif";
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.note-editing-area ul,
+.note-editing-area ol {
+    padding: 0 15px;
+    margin: 0 15px 30px 30px;
+}
+
+.note-editing-area p {
+    color: #4c4c4c;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.note-editing-area blockquote {
+    margin-bottom: 30px;
+    margin-left: 5px;
+    padding: 10px 10px 10px 15px;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 28px;
+    color: #a6a6a6;
+    font-style: italic;
+}
+
+.note-editing-area h1,
+.note-editing-area h2,
+.note-editing-area h3,
+.note-editing-area h4,
+.note-editing-area h5,
+.note-editing-area h6 {
+    margin: 38px 0;
+}
+
+.note-editing-area pre {
+    margin: 22px 0 32px 0;
+    padding: 15px;
+    color: #666666;
+    font-size: 18px;
+    line-height: 28px;
+    border: none;
+    border-radius: 0;
+    background-color: #f7f7f7;
+}
+
+.dropdown-menu.dropdown-style p {
+    margin: 10px 0;
+}
+
+.dropdown-menu.dropdown-style blockquote {
+    margin: 0 0 10px;
+}
+
+.dropdown-menu.dropdown-style h1,
+.dropdown-menu.dropdown-style h2,
+.dropdown-menu.dropdown-style h3,
+.dropdown-menu.dropdown-style h4,
+.dropdown-menu.dropdown-style h5,
+.dropdown-menu.dropdown-style h6 {
+    line-height: 30px;
+}

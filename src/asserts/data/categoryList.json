@@ -1,0 +1,43 @@
+{
+  "code": "0",
+  "datas": {
+    "categoryList": {
+      "pageNumber": 2,
+      "totalSize": 40,
+      "pageSize": 2,
+      "rows": [
+        {
+          "categoryId": "1001",
+          "categoryName": "重要通知",
+          "categoryDescription": "分类描述",
+          "categoryDisplayType": "混排"
+        },
+        {
+          "categoryId": "1002",
+          "categoryName": "找工作",
+          "categoryDescription": "分类描述",
+          "categoryDisplayType": "图片"
+        },
+        {
+          "categoryId": "1003",
+          "categoryName": "考公考研",
+          "categoryDescription": "分类描述",
+          "categoryDisplayType": "纯文字列表"
+        },
+        {
+          "categoryId": "1004",
+          "categoryName": "官网新闻",
+          "categoryDescription": "分类描述",
+          "categoryDisplayType": "视频"
+        },
+        {
+          "categoryId": "1005",
+          "categoryName": "短视频",
+          "categoryDescription": "分类描述",
+          "categoryDisplayType": "音频"
+        }
+
+      ]
+    }
+  }
+}

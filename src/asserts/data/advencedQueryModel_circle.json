@@ -1,0 +1,131 @@
+{
+  "name": "083a04b8-0439-4103-891d-aa7d7634d575",
+  "id": "t_jzg_jbxx_select_condition",
+  "xtype": "customSearcher",
+  "controls": [
+    {
+      "name": "circleName",
+      "caption": "圈子名称",
+      "dataType": "String",
+      "defaultBuilder": "equal",
+      "builderList": "cbl_String",
+      "xtype": "text",
+      "dataSize": 100,
+      "quickSearch": true
+    },
+    {
+      "name": "circleType",
+      "caption": "圈子类型",
+      "dataType": "String",
+      "defaultBuilder": "equal",
+      "builderList": "cbl_String",
+      "url": "/v2/syscodes/circleType",
+      "xtype": "select",
+      "dataSize": 1,
+      "quickSearch": true
+    },
+    {
+      "name": "strutsType",
+      "caption": "圈子构成关系",
+      "dataType": "String",
+      "defaultBuilder": "equal",
+      "builderList": "cbl_String",
+      "url": "/v2/syscodes/circleStrutsType",
+      "xtype": "select",
+      "dataSize": 1,
+      "quickSearch": true
+    }
+  ],
+  "builderLists": {
+    "cbl_String": [
+      {
+        "name": "include",
+        "caption": "包含"
+      },
+      {
+        "name": "equal",
+        "caption": "等于"
+      },
+      {
+        "name": "notEqual",
+        "caption": "不等于"
+      },
+      {
+        "name": "beginWith",
+        "caption": "以..开始"
+      },
+      {
+        "name": "endWith",
+        "caption": "以..结束"
+      }
+    ],
+    "cbl_List": [
+      {
+        "name": "equal",
+        "caption": "等于"
+      },
+      {
+        "name": "notEqual",
+        "caption": "不等于"
+      }
+    ],
+    "cbl_upper_String": [
+      {
+        "name": "upper_equal",
+        "caption": "等于"
+      },
+      {
+        "name": "upper_notEqual",
+        "caption": "不等于"
+      },
+      {
+        "name": "upper_include",
+        "caption": "包含"
+      },
+      {
+        "name": "upper_notInclude",
+        "caption": "不包含"
+      },
+      {
+        "name": "upper_beginWith",
+        "caption": "以..开始"
+      },
+      {
+        "name": "upper_endWith",
+        "caption": "以..结束"
+      }
+    ],
+    "cbl_Other": [
+      {
+        "name": "equal",
+        "caption": "等于"
+      },
+      {
+        "name": "notEqual",
+        "caption": "不等于"
+      },
+      {
+        "name": "more",
+        "caption": "大于"
+      },
+      {
+        "name": "less",
+        "caption": "小于"
+      },
+      {
+        "name": "moreEqual",
+        "caption": "大于等于"
+      },
+      {
+        "name": "lessEqual",
+        "caption": "小于等于"
+      }
+    ],
+    "cbl_equal_List": [
+      {
+        "name": "equal",
+        "caption": "等于"
+      }
+    ]
+  }
+}

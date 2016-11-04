@@ -1,0 +1,36 @@
+{
+  "code": "0",
+  "datas": {
+    "groupList": {
+      "pageNumber": 2,
+      "totalSize": 40,
+      "pageSize": 2,
+      "rows":[
+          {
+            "groupId": "1001",
+            "groupName": "重要通知",
+            "groupType": "模块",
+            "contentTypeLimit": "视频，音频，图集",
+            "tagLimit": "标签1，标签2，标签3",
+            "permissionsLimit": "学校1，学校2，学校3",
+            "aggregationGroup": "1",
+            "startTime": "2016-05-05 12:12",
+            "endTime": "2016-05-09 12:12",
+            "sortNum": "1"
+          },
+          {
+            "groupId": "1001",
+            "groupName": "重要通知",
+            "groupType": "模块",
+            "contentTypeLimit": "视频，音频，图集",
+            "tagLimit": "标签1，标签2，标签3",
+            "permissionsLimit": "学校1，学校2，学校3",
+            "aggregationGroup": "1",
+            "startTime": "2016-05-05 12:12",
+            "endTime": "2016-05-09 12:12",
+            "sortNum": "1"
+          }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "datas":  {
+        "campusMediaId": "1001",
+        "campusMediaName": "重要通知",
+        "sourceType": "0",
+        "organizationType": "1",
+        "source": "123",
+        "description": "123",
+        "campusMediaLogo": "../img/123.png",
+        "backgroundImg": "../img/123.png"
+    },
+    "status": "success",
+    "errorMsg": ""
+
+}
+
+
+

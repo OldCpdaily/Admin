@@ -1,0 +1,34 @@
+{
+    "datas": {
+        "contentId": "1001",
+        "title": "标题",
+        "tags": "优酷",
+        "showChannel": "优酷",
+        "sourceType": "优酷",
+        "sourceAccount": "优酷",
+        "displayType": "优酷",
+        "videoSourceFileUrl": "优酷",
+        "videoSourceUrl": "优酷",
+        "broadcastState": "优酷",
+        "barrage": "优酷",
+        "broadcastStartTime": "2016-05-05 12:12",
+        "broadcastTime": "2:00:00",
+        "permissionsLimit": "优酷",
+        "schoolLimit": "优酷",
+        "overView": "优酷",
+        "contentType": "优酷",
+        "link": "优酷",
+        "detailContent": "优酷",
+        "picture1": "优酷",
+        "picture2": "优酷",
+        "picture3": "优酷",
+        "commentLimit": "优酷",
+        "auditLimit": "优酷",
+        "anonymousCommentLimit": "优酷",
+        "commentType": "优酷"
+    },
+    "status": "success",
+    "errorMsg": ""
+
+}
+

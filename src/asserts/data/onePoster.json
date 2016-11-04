@@ -1,0 +1,13 @@
+{
+  "datas": {
+    "posterId": "123123",
+    "posterTitle": "短视频",
+    "posterType": "资讯推广",
+    "posterPhoto": "",
+    "relation": "关联资讯UUID"
+  },
+  "status": "success",
+  "errorMsg": ""
+
+}
+

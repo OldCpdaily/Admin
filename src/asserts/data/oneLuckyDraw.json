@@ -1,0 +1,12 @@
+{
+  "datas": {
+    "luckyDrawId": "1001",
+    "luckyDrawTitle": "重要通知",
+    "contentId": "",
+    "description": "系统级",
+    "luckyDrawUrl":"http://www.baidu.com",
+    "winUrl": "http://www.baidu.com"
+  },
+  "status": "success",
+  "errorMsg": ""
+}

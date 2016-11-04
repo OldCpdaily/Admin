@@ -1,0 +1,2411 @@
+{
+  "models": [
+    {
+      "name": "editContent",
+      "controls": [
+        {
+          "name": "contentId",
+          "dataType": "String",
+          "caption": "资讯ID",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "categoryId",
+          "dataType": "String",
+          "caption": "分类",
+          "xtype": "checkboxlist",
+          "url": "/v2/feeds/categories",
+          "placeholder": "请选择分类,可不填"
+        },
+        {
+          "name": "subTag",
+          "dataType": "String",
+          "caption": "子标签",
+          "xtype": "text",
+          "placeholder": "请填写分类下的子标签"
+        },
+        {
+          "name": "displayTypeId",
+          "dataType": "String",
+          "caption": "展现类型",
+          "xtype": "radiolist",
+          "url": "../data/getDisplayType.json",
+          "placeholder": "请选择资讯的展现类型",
+          "required": true
+        },
+        {
+          "name": "liveState",
+          "dataType": "String",
+          "caption": "直播状态",
+          "xtype": "radiolist",
+          "url": "../data/liveState.json",
+          "required": true
+        },
+        {
+          "name": "videoSourceId",
+          "dataType": "String",
+          "caption": "视频类型",
+          "xtype": "radiolist",
+          "url": "../data/getVideoSource.json",
+          "placeholder": "请选择视频的类型",
+          "required": true
+        },
+        {
+          "name": "sourceId",
+          "dataType": "String",
+          "caption": "所属来源",
+          "xtype": "select",
+          "url": "/v2/feeds/sources",
+          "placeholder": "请选择资讯所属媒体号",
+          "required": true
+        },
+        {
+          "name": "tag",
+          "dataType": "String",
+          "caption": "用户标签",
+          "xtype": "checkboxlist",
+          "url": "/v2/colleges/names",
+          "placeholder": "请选择资讯需要推送的学校"
+        },
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "资讯标题",
+          "xtype": "text",
+          "placeholder": "请输入资讯的标题",
+          "required": true
+        },
+        {
+          "name": "overview",
+          "dataType": "String",
+          "caption": "摘要",
+          "xtype": "textarea",
+          "placeholder": "请输入资讯的摘要"
+        },
+        {
+          "name": "liveStartTime",
+          "dataType": "String",
+          "caption": "直播开始时间",
+          "xtype": "date-full",
+          "placeholder": "请输入直播的开始时间"
+        },
+        {
+          "name": "liveTime",
+          "dataType": "String",
+          "caption": "直播时长",
+          "xtype": "text",
+          "placeholder": "请输入直播视频的时长"
+        },
+        {
+          "name": "originWebAddress",
+          "dataType": "String",
+          "caption": "原网页地址",
+          "xtype": "text",
+          "placeholder": "请输入资讯所在的原网页地址",
+          "required": true
+        },
+        {
+          "name": "videoAddress",
+          "dataType": "String",
+          "caption": "视频地址",
+          "xtype": "text",
+          "placeholder": "请输入视频的地址",
+          "required": true
+        },
+        {
+          "name": "originTime",
+          "dataType": "String",
+          "caption": "原始发布时间",
+          "xtype": "date-full",
+          "placeholder": "请输入资讯的原始发布时间",
+          "required": true
+        },
+        {
+          "name": "imgUrl",
+          "dataType": "String",
+          "caption": "封面/摘要图片",
+          "xtype": "div",
+          "placeholder": "点击图片可直接上传<br/>格式要求png/jpg,图片宽度要求1098px,请将图片压缩后上传"
+        }
+      ]
+    },
+    {
+      "name": "editMedia",
+      "controls": [
+        {
+          "name": "mediaUUID",
+          "dataType": "String",
+          "caption": "媒体号UUID",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "xtype": "radiolist",
+          "url": "../data/getSourceTypeList.json",
+          "placeholder": "请选择来源类型",
+          "required": true
+        },
+        {
+          "name": "wxId",
+          "dataType": "String",
+          "caption": "ID",
+          "xtype": "text",
+          "placeholder": "请填写媒体号的抓取ID,<font color=\"red\">若是微信公众号,必填<\/font>",
+          "required": true
+        },
+        {
+          "name": "address",
+          "dataType": "String",
+          "caption": "地址",
+          "xtype": "text",
+          "placeholder": "请填写媒体号的抓取地址",
+          "required": true
+        },
+        {
+          "name": "mediaName",
+          "dataType": "String",
+          "caption": "名称",
+          "xtype": "text",
+          "placeholder": "请填写媒体号名称,<font color=\"red\">若是微信公众号,请不要填写<\/font>"
+        },
+        {
+          "name": "mediaDescription",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "text",
+          "placeholder": "请填写媒体号描述,<font color=\"red\">若是微信公众号,请不要填写<\/font>"
+        },
+        {
+          "name": "category",
+          "dataType": "String",
+          "caption": "分类",
+          "xtype": "checkboxlist",
+          "url": "/v2/feeds/categories",
+          "placeholder": "请选择媒体号所属分类",
+          "required": true
+        },
+        {
+          "name": "school",
+          "dataType": "String",
+          "caption": "所属学校",
+          "xtype": "checkboxlist",
+          "url": "/v2/colleges/names",
+          "placeholder": "请选择媒体号所属学校"
+        },
+        {
+          "name": "imgUrl",
+          "dataType": "String",
+          "caption": "头像",
+          "xtype": "div",
+          "placeholder": "请上传媒体号头像,<font color=\"red\">若是微信公众号,请不要上传<\/font><br/>图片格式要求png/jpg,尺寸建议150px*150px(1:1),最好圆形"
+        },
+        {
+          "name": "backgroundImgUrl",
+          "dataType": "String",
+          "caption": "背景图",
+          "xtype": "div",
+          "placeholder": "请上传媒体号背景图<br/>图片格式要求png/jpg,尺寸建议1242*1242px(1:1),请将图片压缩后上传"
+        },
+        {
+          "name": "crawlerModel",
+          "dataType": "String",
+          "caption": "使用爬虫模板",
+          "xtype": "checkboxlist",
+          "url": "../data/getCrawlerModel.json",
+          "placeholder": "请选择使用的爬虫模板,<font color=\"red\">若是视频网站,请不要勾选<\/font>",
+          "hidden":true
+        }
+      ]
+    },
+    {
+      "name": "editCategory",
+      "controls": [
+        {
+          "name": "categoryId",
+          "dataType": "String",
+          "caption": "分类Id",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "categoryName",
+          "dataType": "String",
+          "caption": "分类名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请填写分类的名称,<font color='red'>分类名称不可重复!</font>"
+        },
+        {
+          "name": "categoryDescription",
+          "dataType": "String",
+          "caption": "分类描述",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请填写分类的描述,必填"
+        },
+        {
+          "name": "categoryDisplayType",
+          "dataType": "String",
+          "caption": "封面类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "../data/getDisplayType.json",
+          "placeholder": "请填写分类的名称,必填"
+        },
+        {
+          "name": "relation",
+          "dataType": "String",
+          "caption": "图片格式",
+          "xtype": "radiolist",
+          "url": "../data/getRelation.json",
+          "placeholder": "请填写分类关联的资讯UUID,请用分号隔开,必填",
+          "required": true
+        },
+        {
+          "name": "contentUUID",
+          "dataType": "String",
+          "caption": "关联资讯UUID",
+          "xtype": "textarea",
+          "required": false,
+          "placeholder": "请填写分类关联的资讯UUID,请用分号隔开,必填"
+        },
+        {
+          "name": "imgUrlSmall",
+          "dataType": "String",
+          "caption": "封面小图",
+          "xtype": "div",
+          "required": false,
+          "placeholder": "请上传分类封面的小图片,<font color=\"red\">必须上传<\/font><br/>横图720px*480px(3:2),竖图480px*720px(2:3)"
+        },
+        {
+          "name": "imgUrlBig",
+          "dataType": "String",
+          "caption": "封面大图",
+          "xtype": "div",
+          "required": false,
+          "placeholder": "请上传分类封面的大图片,<font color=\"red\">必须上传!<br/>且已做过高斯模糊处理,请将图片压缩后上传<\/font>"
+        }
+      ]
+    },
+    {
+      "name": "addContent",
+      "controls": [
+        {
+          "name": "contentId",
+          "dataType": "String",
+          "caption": "资讯ID",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "categoryId",
+          "dataType": "String",
+          "caption": "分类",
+          "xtype": "checkboxlist",
+          "url": "/v2/feeds/categories",
+          "placeholder": "请选择分类,可不填"
+        },
+        {
+          "name": "subTag",
+          "dataType": "String",
+          "caption": "子标签",
+          "xtype": "text",
+          "placeholder": "请填写分类下的子标签"
+        },
+        {
+          "name": "displayTypeId",
+          "dataType": "String",
+          "caption": "展现类型",
+          "xtype": "radiolist",
+          "url": "../data/getDisplayType_addContent.json",
+          "placeholder": "请选择资讯的展现类型",
+          "required": true
+        },
+        {
+          "name": "liveState",
+          "dataType": "String",
+          "caption": "直播状态",
+          "xtype": "radiolist",
+          "url": "../data/liveState.json",
+          "required": true
+        },
+        {
+          "name": "videoSourceId",
+          "dataType": "String",
+          "caption": "视频类型",
+          "xtype": "radiolist",
+          "url": "../data/getVideoSource.json",
+          "placeholder": "请选择视频的类型",
+          "required": true
+        },
+        {
+          "name": "sourceId",
+          "dataType": "String",
+          "caption": "所属来源",
+          "xtype": "select",
+          "url": "/v2/feeds/sources",
+          "placeholder": "请选择资讯所属媒体号",
+          "required": true
+        },
+        {
+          "name": "tag",
+          "dataType": "String",
+          "caption": "用户标签",
+          "xtype": "checkboxlist",
+          "url": "/v2/colleges/names",
+          "placeholder": "请选择资讯需要推送的学校"
+        },
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "资讯标题",
+          "xtype": "text",
+          "placeholder": "请输入资讯的标题",
+          "required": true
+        },
+        {
+          "name": "overview",
+          "dataType": "String",
+          "caption": "摘要",
+          "xtype": "textarea",
+          "placeholder": "请输入资讯的摘要"
+        },
+        {
+          "name": "liveStartTime",
+          "dataType": "String",
+          "caption": "直播开始时间",
+          "xtype": "date-full",
+          "placeholder": "请输入直播的开始时间"
+        },
+        {
+          "name": "liveTime",
+          "dataType": "String",
+          "caption": "直播时长",
+          "xtype": "text",
+          "placeholder": "请输入直播视频的时长"
+        },
+        {
+          "name": "originWebAddress",
+          "dataType": "String",
+          "caption": "原网页地址",
+          "xtype": "text",
+          "placeholder": "请输入资讯所在的原网页地址",
+          "required": true
+        },
+        {
+          "name": "videoAddress",
+          "dataType": "String",
+          "caption": "视频地址",
+          "xtype": "text",
+          "placeholder": "请输入视频的地址",
+          "required": true
+        },
+        {
+          "name": "originTime",
+          "dataType": "String",
+          "caption": "原始发布时间",
+          "xtype": "date-full",
+          "placeholder": "请输入资讯的原始发布时间",
+          "required": true
+        },
+        {
+          "name": "imgUrl",
+          "dataType": "String",
+          "caption": "封面/摘要图片",
+          "xtype": "div",
+          "placeholder": "点击图片可直接上传<br/>图片宽度要求1098px,格式要求png/jpg,请将图片压缩后上传"
+        }
+      ]
+    },
+    {
+      "name": "editPoster",
+      "controls": [
+        {
+          "name": "posterId",
+          "dataType": "String",
+          "caption": "海报Id",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "posterTitle",
+          "dataType": "String",
+          "caption": "海报标题",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请填写海报的标题,必填"
+        },
+        {
+          "name": "posterType",
+          "dataType": "String",
+          "caption": "海报类型",
+          "xtype": "radiolist",
+          "url": "../data/getPosterType.json",
+          "required": true,
+          "placeholder": "请选择海报类型,必填"
+        },
+        {
+          "name": "posterPhoto",
+          "dataType": "String",
+          "caption": "海报图",
+          "xtype": "div",
+          "required": false,
+          "placeholder": "点击图片可直接上传<br/>图片格式要求png/jpg,尺寸建议1242*1242px(1:1),请将图片压缩后上传"
+        },
+        {
+          "name": "relation",
+          "dataType": "String",
+          "caption": "资讯ID/地址",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请填写分类的名称,必填"
+        }
+      ]
+    },
+    {
+      "name": "addType",
+      "controls": [
+        {
+          "name": "typeId",
+          "dataType": "String",
+          "caption": "所属类型名称",
+          "xtype": "select",
+          "required": true,
+          "url": "/v2/syscodes/system_type"
+        },
+        {
+          "name": "value",
+          "dataType": "String",
+          "caption": "类型值",
+          "xtype": "text",
+          "checkType": "unique",
+          "required": true,
+          "placeholder": "请输入类型的名称"
+        },
+        {
+          "name": "display",
+          "dataType": "String",
+          "caption": "类型名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入类型的名称"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "显示顺序",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入类型的显示顺序"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入类型的描述"
+        }
+      ]
+    },
+    {
+      "name": "addTag",
+      "controls": [
+        {
+          "name": "tagId",
+          "dataType": "String",
+          "caption": "标签编号",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入标签的编号"
+        },
+        {
+          "name": "tagName",
+          "dataType": "String",
+          "caption": "标签名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入标签的名称"
+        },
+        {
+          "name": "tagType",
+          "dataType": "String",
+          "caption": "标签类型",
+          "xtype": "radiolist",
+          "required": true,
+          "placeholder": "请输入标签的类型",
+          "url": "/v2/syscodes/tag_type"
+        },
+        {
+          "name": "enabled",
+          "dataType": "String",
+          "caption": "启用状态",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "required": true
+        },
+        {
+          "name": "isShown",
+          "dataType": "String",
+          "caption": "是否显示",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "required": true
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的描述"
+        },
+        {
+          "name": "extendInfo",
+          "dataType": "String",
+          "caption": "扩展信息",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的扩展信息"
+        }
+      ]
+    },
+    {
+      "name": "editTag",
+      "controls": [
+        {
+          "name": "tagId",
+          "dataType": "String",
+          "caption": "标签编号",
+          "xtype": "text",
+          "required": true,
+          "readonly": true
+        },
+        {
+          "name": "tagName",
+          "dataType": "String",
+          "caption": "标签名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入标签的名称"
+        },
+        {
+          "name": "tagType",
+          "dataType": "String",
+          "caption": "标签类型",
+          "xtype": "radiolist",
+          "required": true,
+          "placeholder": "请输入标签的类型",
+          "url": "/v2/syscodes/tag_type"
+        },
+        {
+          "name": "tagLevel",
+          "dataType": "String",
+          "caption": "标签级别",
+          "xtype": "radiolist",
+          "required": true,
+          "placeholder": "请输入标签的级别",
+          "url": "/v2/syscodes/tag_level"
+        },
+        {
+          "name": "enabled",
+          "dataType": "String",
+          "caption": "启用状态",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "required": true
+        },
+        {
+          "name": "isShown",
+          "dataType": "String",
+          "caption": "是否显示",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "required": true
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的描述"
+        },
+        {
+          "name": "extendInfo",
+          "dataType": "String",
+          "caption": "扩展信息",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的扩展信息"
+        }
+      ]
+    },
+    {
+      "name": "addContent_new",
+      "controls": [
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "内容标题",
+          "xtype": "text",
+          "placeholder": "请填写内容标题",
+          "required": true
+        },
+        {
+          "name": "tags",
+          "dataType": "String",
+          "caption": "标签集合",
+          "xtype": "multi-select",
+          "url": "/v2/tag/getTags?tagDomain=0",
+          "placeholder": "请选择标签的集合,多选"
+        },
+        {
+          "name": "showChannel",
+          "dataType": "String",
+          "caption": "所属组-主要",
+          "xtype": "select",
+          "url": "/v2/group/getGroups",
+          "placeholder": "请选择内容的显示频道,单选"
+        },
+        {
+          "name": "groups",
+          "dataType": "String",
+          "caption": "所属组",
+          "xtype": "multi-select",
+          "checkSize": "6",
+          "url": "/v2/group/getGroups",
+          "placeholder": "请选择内容所属的虚拟组,最多只能选6个"
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/content_source_type",
+          "required": true,
+          "placeholder": "请选择内容的来源类型,单选"
+        },
+        {
+          "name": "sourceAccount",
+          "dataType": "String",
+          "caption": "来源账号",
+          "xtype": "select",
+          "url": "/v2/media/getMedias",
+          "required": true,
+          "placeholder": "请选择内容的来源账号,单选"
+        },
+        {
+          "name": "userAccount",
+          "dataType": "String",
+          "caption": "来源账号",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入内容的个人发布账号"
+        },
+        {
+          "name": "displayType",
+          "dataType": "String",
+          "caption": "展现类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/content_type",
+          "required": true,
+          "placeholder": "请选择内容的展现类型,单选"
+        },
+        {
+          "name": "topicInviter",
+          "dataType": "String",
+          "caption": "邀请用户",
+          "xtype": "textarea",
+          "hidden": true,
+          "placeholder": "请选择话题的邀请回答用户"
+        },
+        {
+          "name": "broadcastState",
+          "dataType": "String",
+          "caption": "直播状态",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/live_state",
+          "placeholder": "请选择直播的状态"
+        },
+        {
+          "name": "broadcastStartTime",
+          "dataType": "String",
+          "caption": "直播开始时间",
+          "xtype": "date-full",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入直播开始时间"
+        },
+        {
+          "name": "broadcastTime",
+          "dataType": "String",
+          "caption": "直播时长",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入直播时长"
+        },
+        {
+          "name": "videoType",
+          "dataType": "String",
+          "caption": "视频类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/video_type",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请选择视频的类型,单选"
+        },
+        {
+          "name": "videoSourceUrl",
+          "dataType": "String",
+          "caption": "视频源地址/源ID",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入视频的源地址/源ID<br/>若是优酷类型,请填写源ID;否则输入视频的源地址"
+        },
+        {
+          "name": "videoShareCode",
+          "dataType": "String",
+          "caption": "视频分享代码",
+          "xtype": "textarea",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入视频源文件地址<br/>若是优酷类型,请填写分享时通用代码中的src地址,否则请填写MP4的文件地址"
+        },
+        {
+          "name": "permissionsLimit",
+          "dataType": "String",
+          "caption": "权限限制",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "schoolLimit",
+          "dataType": "String",
+          "caption": "学校限制",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "commentLimit",
+          "dataType": "String",
+          "caption": "允许评论",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择内容是否允许评论",
+          "required": true
+        },
+        {
+          "name": "barrage",
+          "dataType": "String",
+          "caption": "弹幕启用",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/enable_status",
+          "placeholder": "请选择是否开启弹幕"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "显示顺序",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请填写直播内容的显示顺序"
+        },
+        {
+          "name": "commentType",
+          "dataType": "String",
+          "caption": "评论类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/comment_type_new",
+          "placeholder": "请选择内容的评论类型",
+          "required": true
+        },
+        {
+          "name": "permitEmotions",
+          "dataType": "String",
+          "caption": "评论是否允许表情",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择评论是否允许使用表情来表达情绪",
+          "required": true
+        },
+        {
+          "name": "permitThumbsUp",
+          "dataType": "String",
+          "caption": "评论是否允许点赞",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择评论是否允许点赞",
+          "required": true
+        },
+        {
+          "name": "overView",
+          "dataType": "String",
+          "caption": "摘要",
+          "xtype": "textarea",
+          "placeholder": "请输入内容的摘要",
+          "required": true
+        },
+        {
+          "name": "contentType",
+          "dataType": "String",
+          "caption": "内容类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/content_src_type",
+          "placeholder": "请选择内容类型"
+        },
+        {
+          "name": "link",
+          "dataType": "String",
+          "caption": "源地址",
+          "xtype": "text",
+          "placeholder": "请输入内容的来源地址",
+          "required": true,
+          "hidden": true
+        },
+        {
+          "name": "detailContent",
+          "dataType": "String",
+          "caption": "详细内容",
+          "xtype": "div",
+          "placeholder": "请输入详细内容",
+          "hidden": true
+        },
+        {
+          "name": "luckyDrawId",
+          "dataType": "String",
+          "caption": "关联抽奖ID",
+          "xtype": "text",
+          "placeholder": "请输入关联抽奖ID"
+        },
+        {
+          "name": "publishTime",
+          "dataType": "String",
+          "caption": "发布时间",
+          "xtype": "date-full",
+          "placeholder": "请输入资讯的发布时间"
+        },
+        {
+          "name": "listImgType",
+          "dataType": "String",
+          "caption": "列表显示图类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/listImg_type",
+          "placeholder": "请选择列表展示图的类型,单选"
+        },
+        {
+          "name": "advImg",
+          "dataType": "String",
+          "caption": "广告图",
+          "xtype": "div",
+          "placeholder": "请上传内容广告图"
+        },
+        {
+          "name": "picture1",
+          "dataType": "String",
+          "caption": "摘要图片1",
+          "xtype": "div",
+          "placeholder": "请上传内容的摘要图片1"
+        },
+        {
+          "name": "picture2",
+          "dataType": "String",
+          "caption": "摘要图片2",
+          "xtype": "div",
+          "placeholder": "请上传内容的摘要图片2"
+        },
+        {
+          "name": "picture3",
+          "dataType": "String",
+          "caption": "摘要图片3",
+          "xtype": "div",
+          "placeholder": "请上传内容的摘要图片3"
+        }
+      ]
+    },
+    {
+      "name": "editContent_new",
+      "controls": [
+        {
+          "name": "contentId",
+          "dataType": "String",
+          "caption": "内容编号",
+          "xtype": "text",
+          "readonly": true,
+          "placeholder": "请填写内容标题"
+        },
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "内容标题",
+          "xtype": "text",
+          "placeholder": "请填写内容标题",
+          "required": true
+        },
+        {
+          "name": "tags",
+          "dataType": "String",
+          "caption": "标签集合",
+          "xtype": "multi-select",
+          "url": "/v2/tag/getTags?tagDomain=0",
+          "placeholder": "请选择标签的集合,多选"
+        },
+        {
+          "name": "showChannel",
+          "dataType": "String",
+          "caption": "所属组-主要",
+          "xtype": "select",
+          "url": "/v2/group/getGroups",
+          "placeholder": "请选择内容的显示频道,单选"
+        },
+        {
+          "name": "groups",
+          "dataType": "String",
+          "caption": "所属组",
+          "xtype": "multi-select",
+          "checkSize": "6",
+          "url": "/v2/group/getGroups",
+          "placeholder": "请选择内容所属的虚拟组,最多只能选6个"
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/content_source_type",
+          "required": true,
+          "placeholder": "请选择内容的来源类型,单选"
+        },
+        {
+          "name": "sourceAccount",
+          "dataType": "String",
+          "caption": "来源账号",
+          "xtype": "select",
+          "url": "/v2/media/getMedias",
+          "required": true,
+          "placeholder": "请选择内容的来源账号,单选"
+        },
+        {
+          "name": "userAccount",
+          "dataType": "String",
+          "caption": "来源账号",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入内容的个人发布账号"
+        },
+        {
+          "name": "displayType",
+          "dataType": "String",
+          "caption": "展现类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/content_type",
+          "required": true,
+          "placeholder": "请选择内容的展现类型,单选"
+        },
+        {
+          "name": "topicInviter",
+          "dataType": "String",
+          "caption": "邀请用户",
+          "xtype": "textarea",
+          "hidden": true,
+          "placeholder": "请选择话题的邀请回答用户"
+        },
+        {
+          "name": "broadcastState",
+          "dataType": "String",
+          "caption": "直播状态",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/live_state",
+          "placeholder": "请选择直播的状态"
+        },
+        {
+          "name": "broadcastStartTime",
+          "dataType": "String",
+          "caption": "直播开始时间",
+          "xtype": "date-full",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入直播开始时间"
+        },
+        {
+          "name": "broadcastTime",
+          "dataType": "String",
+          "caption": "直播时长",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入直播时长"
+        },
+        {
+          "name": "videoType",
+          "dataType": "String",
+          "caption": "视频类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/video_type",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请选择视频的类型,单选"
+        },
+        {
+          "name": "videoSourceUrl",
+          "dataType": "String",
+          "caption": "视频源地址/源ID",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入视频的源地址/源ID<br/>若是优酷类型,请填写源ID;否则输入视频的源地址"
+        },
+        {
+          "name": "videoShareCode",
+          "dataType": "String",
+          "caption": "视频分享代码",
+          "xtype": "textarea",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入视频源文件地址<br/>若是优酷类型,请填写分享时通用代码中的src地址,否则请填写MP4的文件地址"
+        },
+        {
+          "name": "permissionsLimit",
+          "dataType": "String",
+          "caption": "权限限制",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "schoolLimit",
+          "dataType": "String",
+          "caption": "学校限制",
+          "xtype": "text",
+          "hidden": true
+        },
+        {
+          "name": "commentLimit",
+          "dataType": "String",
+          "caption": "允许评论",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择内容是否允许评论",
+          "required": true
+        },
+        {
+          "name": "barrage",
+          "dataType": "String",
+          "caption": "弹幕启用",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/enable_status",
+          "placeholder": "请选择是否开启弹幕"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "显示顺序",
+          "xtype": "text",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请填写直播内容的显示顺序"
+        },
+        {
+          "name": "commentType",
+          "dataType": "String",
+          "caption": "评论类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/comment_type_new",
+          "placeholder": "请选择内容的评论类型",
+          "required": true
+        },
+        {
+          "name": "permitEmotions",
+          "dataType": "String",
+          "caption": "评论是否允许表情",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择评论是否允许使用表情来表达情绪",
+          "required": true
+        },
+        {
+          "name": "permitThumbsUp",
+          "dataType": "String",
+          "caption": "评论是否允许点赞",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择评论是否允许点赞",
+          "required": true
+        },
+        {
+          "name": "overView",
+          "dataType": "String",
+          "caption": "摘要",
+          "xtype": "textarea",
+          "placeholder": "请输入内容的摘要",
+          "required": true
+        },
+        {
+          "name": "contentType",
+          "dataType": "String",
+          "caption": "内容类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/content_src_type",
+          "placeholder": "请选择内容类型"
+        },
+        {
+          "name": "link",
+          "dataType": "String",
+          "caption": "源地址",
+          "xtype": "text",
+          "placeholder": "请输入内容的源地址",
+          "required": true
+        },
+        {
+          "name": "localLink",
+          "dataType": "String",
+          "caption": "本地地址",
+          "xtype": "text",
+          "placeholder": "请输入内容存放于本地的地址",
+          "required": true,
+          "hidden": true
+        },
+        {
+          "name": "detailContent",
+          "dataType": "String",
+          "caption": "详细内容",
+          "xtype": "div",
+          "hidden": true,
+          "placeholder": "请输入详细内容"
+        },
+        {
+          "name": "luckyDrawId",
+          "dataType": "String",
+          "caption": "关联抽奖ID",
+          "xtype": "text",
+          "placeholder": "请输入关联抽奖ID"
+        },
+        {
+          "name": "publishTime",
+          "dataType": "String",
+          "caption": "发布时间",
+          "xtype": "date-full",
+          "placeholder": "请输入资讯的发布时间"
+        },
+        {
+          "name": "listImgType",
+          "dataType": "String",
+          "caption": "列表显示图类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/listImg_type",
+          "placeholder": "请选择列表展示图的类型,单选"
+        },
+        {
+          "name": "advImg",
+          "dataType": "String",
+          "caption": "广告图",
+          "xtype": "div",
+          "placeholder": "请上传内容广告图"
+        },
+        {
+          "name": "picture1",
+          "dataType": "String",
+          "caption": "摘要图片1",
+          "xtype": "div",
+          "placeholder": "请上传内容的摘要图片1"
+        },
+        {
+          "name": "picture2",
+          "dataType": "String",
+          "caption": "摘要图片2",
+          "xtype": "div",
+          "placeholder": "请上传内容的摘要图片2"
+        },
+        {
+          "name": "picture3",
+          "dataType": "String",
+          "caption": "摘要图片3",
+          "xtype": "div",
+          "placeholder": "请上传内容的摘要图片3"
+        }
+      ]
+    },
+    {
+      "name": "editGroup",
+      "controls": [
+        {
+          "name": "groupId",
+          "dataType": "String",
+          "caption": "组编号",
+          "xtype": "text",
+          "required": true,
+          "readonly": true,
+          "placeholder": "请输入组编号"
+        },
+        {
+          "name": "groupName",
+          "dataType": "String",
+          "caption": "组名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入组名称"
+        },
+        {
+          "name": "groupType",
+          "dataType": "String",
+          "caption": "组类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/group_type",
+          "placeholder": "请选择组类型"
+        },
+        {
+          "name": "contentTypeLimit",
+          "dataType": "String",
+          "caption": "内容类型限制",
+          "xtype": "checkboxlist",
+          "url": "/v2/syscodes/content_type",
+          "required": true,
+          "placeholder": "请选择组类型"
+        },
+        {
+          "name": "permissionsLimit",
+          "dataType": "String",
+          "caption": "权限类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/limit_type",
+          "placeholder": "请选择权限类型"
+        },
+        {
+          "name": "schoolLimit",
+          "dataType": "String",
+          "caption": "学校限制",
+          "xtype": "multi-select",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/group_limit",
+          "placeholder": "请选择学校限制"
+        },
+        {
+          "name": "aggregationGroup",
+          "dataType": "String",
+          "caption": "是否聚合组",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否为聚合组"
+        },
+        {
+          "name": "strutsType",
+          "dataType": "String",
+          "caption": "构造关系",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/struts_type",
+          "placeholder": "请选择标签的构造关系"
+        },
+        {
+          "name": "tagLimit",
+          "dataType": "String",
+          "caption": "标签限制",
+          "xtype": "multi-select",
+          "url": "/v2/tag/getTags?tagDomain=0",
+          "required": true,
+          "placeholder": "请选择标签限制"
+        },
+        {
+          "name": "posterGroupId",
+          "dataType": "String",
+          "caption": "关联广告位",
+          "xtype": "select",
+          "url": "/v2/group/getGroups?typeId=4",
+          "placeholder": "请选择关联广告位"
+        },
+        {
+          "name": "groupParam",
+          "dataType": "String",
+          "caption": "组参数",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的组参数"
+        },
+        {
+          "name": "startTime",
+          "dataType": "String",
+          "caption": "开始时间",
+          "xtype": "date-full",
+          "placeholder": "请输入虚拟组的开始时间"
+        },
+        {
+          "name": "endTime",
+          "dataType": "String",
+          "caption": "结束时间",
+          "xtype": "date-full",
+          "placeholder": "请输入虚拟组的结束时间"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序值",
+          "xtype": "text",
+          "placeholder": "请输入标签的排序值"
+        },
+        {
+          "name": "isAnonymous",
+          "dataType": "String",
+          "caption": "是否允许匿名",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": false,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否允许匿名"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的标签"
+        },
+        {
+          "name": "logo",
+          "dataType": "String",
+          "caption": "图标",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的图标"
+        },
+        {
+          "name": "backgroundImg",
+          "dataType": "String",
+          "caption": "背景图",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的背景图"
+        }
+      ]
+    },
+    {
+      "name": "addCampusMedia",
+      "controls": [
+        {
+          "name": "campusMediaId",
+          "dataType": "String",
+          "caption": "校园号编号",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入校园号编号"
+        },
+        {
+          "name": "campusMediaName",
+          "dataType": "String",
+          "caption": "校园号名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入校园号名称"
+        },
+        {
+          "name": "source",
+          "dataType": "String",
+          "caption": "来源地址/微信ID",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入来源地址/微信ID"
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/school_no_source_type",
+          "required": true,
+          "placeholder": "请选择来源类型"
+        },
+        {
+          "name": "organizationType",
+          "dataType": "String",
+          "caption": "组织类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/school_no_org_type",
+          "required": true,
+          "placeholder": "请选择组织类型"
+        },
+        {
+          "name": "isDisplay",
+          "dataType": "String",
+          "caption": "是否显示",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "required": true,
+          "placeholder": "请选择校园号在APP的列表中是否显示"
+        },
+        {
+          "name": "collegeId",
+          "dataType": "String",
+          "caption": "所属学校",
+          "xtype": "select",
+          "url": "/v2/college/getColleges",
+          "placeholder": "请选择所属学校"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序值",
+          "xtype": "text",
+          "placeholder": "请输入校园号显示时的排序值,数值越大,排序越靠前"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入描述"
+        },
+        {
+          "name": "campusMediaLogo",
+          "dataType": "String",
+          "caption": "图标",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的图标"
+        },
+        {
+          "name": "backgroundImg",
+          "dataType": "String",
+          "caption": "背景图",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的背景图"
+        }
+      ]
+    },
+    {
+      "name": "editCampusMedia",
+      "controls": [
+        {
+          "name": "campusMediaId",
+          "dataType": "String",
+          "caption": "校园号编号",
+          "xtype": "text",
+          "required": true,
+          "readonly": true
+        },
+        {
+          "name": "campusMediaName",
+          "dataType": "String",
+          "caption": "校园号名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入校园号名称"
+        },
+        {
+          "name": "source",
+          "dataType": "String",
+          "caption": "来源地址/微信ID",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入来源地址/微信ID"
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/school_no_source_type",
+          "required": true,
+          "placeholder": "请选择来源类型"
+        },
+        {
+          "name": "organizationType",
+          "dataType": "String",
+          "caption": "组织类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/school_no_org_type",
+          "required": true,
+          "placeholder": "请选择组织类型"
+        },
+        {
+          "name": "isDisplay",
+          "dataType": "String",
+          "caption": "是否显示",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/yn_state",
+          "required": true,
+          "placeholder": "请选择校园号在APP的列表中是否显示"
+        },
+        {
+          "name": "collegeId",
+          "dataType": "String",
+          "caption": "所属学校",
+          "xtype": "select",
+          "url": "/v2/college/getColleges",
+          "placeholder": "请选择所属学校"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序值",
+          "xtype": "text",
+          "placeholder": "请输入校园号显示时的排序值,数值越大,排序越靠前"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入描述"
+        },
+        {
+          "name": "campusMediaLogo",
+          "dataType": "String",
+          "caption": "图标",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的图标"
+        },
+        {
+          "name": "backgroundImg",
+          "dataType": "String",
+          "caption": "背景图",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的背景图"
+        }
+      ]
+    },
+    {
+      "name": "editType",
+      "controls": [
+        {
+          "name": "typeId",
+          "dataType": "String",
+          "caption": "所属类型名称",
+          "xtype": "text",
+          "readonly": true,
+          "hidden":true
+        },
+        {
+          "name": "typeName",
+          "dataType": "String",
+          "caption": "所属类型名称",
+          "xtype": "text",
+          "readonly": true
+        },
+        {
+          "name": "value",
+          "dataType": "String",
+          "caption": "类型值",
+          "xtype": "text",
+          "readonly": true
+        },
+        {
+          "name": "display",
+          "dataType": "String",
+          "caption": "类型名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入类型的名称"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "显示顺序",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入类型的显示顺序"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入类型的描述"
+        }
+      ]
+    },
+    {
+      "name": "addGroup",
+      "controls": [
+        {
+          "name": "groupId",
+          "dataType": "String",
+          "caption": "组编号",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入组编号"
+        },
+        {
+          "name": "groupName",
+          "dataType": "String",
+          "caption": "组名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入组名称"
+        },
+        {
+          "name": "groupType",
+          "dataType": "String",
+          "caption": "组类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/group_type",
+          "placeholder": "请选择组类型"
+        },
+        {
+          "name": "contentTypeLimit",
+          "dataType": "String",
+          "caption": "内容类型限制",
+          "xtype": "checkboxlist",
+          "url": "/v2/syscodes/content_type",
+          "required": true,
+          "placeholder": "请选择组类型"
+        },
+        {
+          "name": "permissionsLimit",
+          "dataType": "String",
+          "caption": "权限类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/limit_type",
+          "placeholder": "请选择权限类型"
+        },
+        {
+          "name": "schoolLimit",
+          "dataType": "String",
+          "caption": "学校限制",
+          "xtype": "multi-select",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/group_limit",
+          "placeholder": "请选择学校限制"
+        },
+        {
+          "name": "aggregationGroup",
+          "dataType": "String",
+          "caption": "是否聚合组",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否为聚合组"
+        },
+        {
+          "name": "strutsType",
+          "dataType": "String",
+          "caption": "构造关系",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/struts_type",
+          "placeholder": "请选择标签的构造关系"
+        },
+        {
+          "name": "tagLimit",
+          "dataType": "String",
+          "caption": "标签限制",
+          "xtype": "multi-select",
+          "url": "/v2/tag/getTags?tagDomain=0",
+          "required": true,
+          "placeholder": "请选择标签限制"
+        },
+        {
+          "name": "posterGroupId",
+          "dataType": "String",
+          "caption": "关联广告位",
+          "xtype": "select",
+          "url": "/v2/group/getGroups?typeId=4",
+          "placeholder": "请选择关联广告位"
+        },
+        {
+          "name": "groupParam",
+          "dataType": "String",
+          "caption": "组参数",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的组参数"
+        },
+        {
+          "name": "startTime",
+          "dataType": "String",
+          "caption": "开始时间",
+          "xtype": "date-full",
+          "placeholder": "请输入虚拟组的开始时间"
+        },
+        {
+          "name": "endTime",
+          "dataType": "String",
+          "caption": "结束时间",
+          "xtype": "date-full",
+          "placeholder": "请输入虚拟组的结束时间"
+        },
+        {
+          "name": "isAnonymous",
+          "dataType": "String",
+          "caption": "是否允许匿名",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": false,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否允许匿名"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序值",
+          "xtype": "text",
+          "placeholder": "请输入标签的排序值"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入标签的标签"
+        },
+        {
+          "name": "logo",
+          "dataType": "String",
+          "caption": "图标",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的图标"
+        },
+        {
+          "name": "backgroundImg",
+          "dataType": "String",
+          "caption": "背景图",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的背景图"
+        }
+      ]
+    },
+    {
+      "name": "addLuckyDraw",
+      "controls": [
+        {
+          "name": "luckyDrawTitle",
+          "dataType": "String",
+          "caption": "抽奖标题",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入抽奖标题"
+        },
+        {
+          "name": "luckyDrawUrl",
+          "dataType": "String",
+          "caption": "抽奖页面Url",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入抽奖页面Url"
+        },
+        {
+          "name": "winUrl",
+          "dataType": "String",
+          "caption": "中奖页面Url",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入抽奖页面Url"
+        },
+        {
+          "name": "endTime",
+          "dataType": "String",
+          "caption": "抽奖结束时间",
+          "xtype": "date-full",
+          "required": true,
+          "placeholder": "请输入抽奖结束时间"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入抽奖的描述"
+        }
+      ]
+    },
+    {
+      "name": "editLuckyDraw",
+      "controls": [
+        {
+          "name": "luckyDrawId",
+          "dataType": "String",
+          "caption": "抽奖编号",
+          "xtype": "select",
+          "required": true,
+          "readonly": true
+        },
+        {
+          "name": "contentId",
+          "dataType": "String",
+          "caption": "关联内容ID",
+          "xtype": "text",
+          "required": true,
+          "readonly": true
+        },
+        {
+          "name": "luckyDrawTitle",
+          "dataType": "String",
+          "caption": "抽奖标题",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入抽奖标题"
+        },
+        {
+          "name": "luckyDrawUrl",
+          "dataType": "String",
+          "caption": "抽奖页面Url",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入抽奖页面Url"
+        },
+        {
+          "name": "winUrl",
+          "dataType": "String",
+          "caption": "中奖页面Url",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入抽奖页面Url"
+        },
+        {
+          "name": "endTime",
+          "dataType": "String",
+          "caption": "抽奖结束时间",
+          "xtype": "date-full",
+          "required": true,
+          "placeholder": "请输入抽奖结束时间"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入抽奖的描述"
+        }
+      ]
+    },
+    {
+      "name": "pushDetail",
+      "controls": [
+        {
+          "name": "pushId",
+          "dataType": "String",
+          "caption": "推送编号",
+          "xtype": "text",
+          "readonly": true
+        },
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "通知标题",
+          "xtype": "text",
+          "readonly": true
+        },
+        {
+          "name": "alterContent",
+          "dataType": "String",
+          "caption": "通知内容",
+          "xtype": "textarea",
+          "readonly": true
+        },
+        {
+          "name": "platform",
+          "dataType": "String",
+          "caption": "推送平台",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/platform_type"
+        },
+        {
+          "name": "audienceType",
+          "dataType": "String",
+          "caption": "推送类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/audience_type"
+        },
+        {
+          "name": "tags",
+          "dataType": "String",
+          "caption": "用户标签",
+          "xtype": "multi-select",
+          "url": "/v2/tag/getTags?tagDomain=1"
+        },
+        {
+          "name": "alias",
+          "dataType": "String",
+          "caption": "用户别名",
+          "xtype": "textarea"
+        },
+        {
+          "name": "feedId",
+          "dataType": "String",
+          "caption": "推送内容编号",
+          "xtype": "textarea",
+          "readonly": true
+        },
+        {
+          "name": "subParam",
+          "dataType": "String",
+          "caption": "子参数",
+          "xtype": "textarea",
+          "readonly": true
+        },
+        {
+          "name": "cTime",
+          "dataType": "String",
+          "caption": "创建时间",
+          "xtype": "date-full",
+          "readonly": true
+        },
+        {
+          "name": "pushTime",
+          "dataType": "String",
+          "caption": "推送时间",
+          "xtype": "date-full",
+          "readonly": true
+        },
+        {
+          "name": "status",
+          "dataType": "String",
+          "caption": "推送状态",
+          "xtype": "text",
+          "readonly": true
+        }
+      ]
+    },
+    {
+      "name": "addPush",
+      "controls": [
+
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "通知标题",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入通知标题"
+        },
+        {
+          "name": "alterContent",
+          "dataType": "String",
+          "caption": "通知内容",
+          "xtype": "textarea",
+          "required": true,
+          "placeholder": "请输入通知内容"
+        },
+        {
+          "name": "platform",
+          "dataType": "String",
+          "caption": "推送平台",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/platform_type",
+          "required": true,
+          "placeholder": "请选择推送平台"
+        },
+        {
+          "name": "audienceType",
+          "dataType": "String",
+          "caption": "推送类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/audience_type",
+          "required": true,
+          "placeholder": "请选择推送类型"
+        },
+        {
+          "name": "tags",
+          "dataType": "String",
+          "caption": "用户标签",
+          "xtype": "multi-select",
+          "url": "/v2/tag/getTags?tagDomain=1",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请选择用户标签"
+        },
+        {
+          "name": "alias",
+          "dataType": "String",
+          "caption": "用户别名",
+          "xtype": "textarea",
+          "required": true,
+          "hidden": true,
+          "placeholder": "请输入用户别名"
+        },
+        {
+          "name": "feedId",
+          "dataType": "String",
+          "caption": "推送内容编号",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入推送的内容编号"
+        },
+        {
+          "name": "subParam",
+          "dataType": "String",
+          "caption": "子参数",
+          "xtype": "textarea",
+          "placeholder": "请输入内容层现所使用的子参数，用来定义直播等状态下的额外子状态"
+        }
+      ]
+    },
+    {
+      "name": "editPush",
+      "controls": [
+        {
+          "name": "pushId",
+          "dataType": "String",
+          "caption": "推送编号",
+          "xtype": "text",
+          "readonly": true
+        },
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "通知标题",
+          "xtype": "text",
+          "required": true
+        },
+        {
+          "name": "alterContent",
+          "dataType": "String",
+          "caption": "通知内容",
+          "xtype": "textarea",
+          "required": true
+        },
+        {
+          "name": "platform",
+          "dataType": "String",
+          "caption": "推送平台",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/platform_type",
+          "required": true
+        },
+        {
+          "name": "audienceType",
+          "dataType": "String",
+          "caption": "推送类型",
+          "xtype": "radiolist",
+          "url": "/v2/syscodes/audience_type",
+          "required": true
+        },
+        {
+          "name": "tags",
+          "dataType": "String",
+          "caption": "用户标签",
+          "xtype": "multi-select",
+          "url": "/v2/tag/getTags?tagDomain=1",
+          "hidden":true,
+          "required": true
+        },
+        {
+          "name": "alias",
+          "dataType": "String",
+          "caption": "用户别名",
+          "xtype": "textarea",
+          "hidden":true,
+          "required": true
+        },
+        {
+          "name": "feedId",
+          "dataType": "String",
+          "caption": "推送内容编号",
+          "xtype": "textarea",
+          "required": true
+        },
+        {
+          "name": "subParam",
+          "dataType": "String",
+          "caption": "子参数",
+          "xtype": "textarea"
+        }
+      ]
+    },{
+      "name": "addCircle",
+      "controls": [
+        {
+          "name": "circleId",
+          "dataType": "String",
+          "caption": "圈子编号",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入圈子编号"
+        },
+        {
+          "name": "circleName",
+          "dataType": "String",
+          "caption": "圈子名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入圈子名称"
+        },
+        {
+          "name": "circleType",
+          "dataType": "String",
+          "caption": "圈子类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/circleType",
+          "placeholder": "请选择圈子类型"
+        },{
+          "name": "strutsType",
+          "dataType": "String",
+          "caption": "圈子构成关系",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/circleStrutsType",
+          "placeholder": "请选择圈子构成关系"
+        },
+        {
+          "name": "permissionsLimit",
+          "dataType": "String",
+          "caption": "权限类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/limit_type",
+          "placeholder": "请选择权限类型"
+        },
+        {
+          "name": "schoolLimit",
+          "dataType": "String",
+          "caption": "学校限制",
+          "xtype": "multi-select",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/group_limit",
+          "placeholder": "请选择学校限制"
+        },
+        {
+          "name": "isAnonymous",
+          "dataType": "String",
+          "caption": "是否允许匿名",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否允许匿名"
+        },{
+          "name": "isRealNamePost",
+          "dataType": "String",
+          "caption": "是否强制匿名发帖",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否强制匿名发帖"
+        },{
+          "name": "isRealNameRespond",
+          "dataType": "String",
+          "caption": "是否强制匿名回复",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否强制匿名回复"
+        },
+        {
+          "name": "posterGroupId",
+          "dataType": "String",
+          "caption": "关联广告位",
+          "xtype": "select",
+          "url": "/v2/group/getGroups?typeId=4",
+          "placeholder": "请选择关联广告位"
+        },
+        {
+          "name": "topMessages",
+          "dataType": "String",
+          "caption": "置顶消息",
+          "xtype": "textarea",
+          "placeholder": "请输入置顶消息"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序值",
+          "xtype": "text",
+          "placeholder": "请输入标签的排序值"
+        },
+        {
+          "name": "sortStrategy",
+          "dataType": "String",
+          "caption": "排序策略",
+          "xtype": "text",
+          "placeholder": ""
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入描述"
+        },{
+          "name": "notice",
+          "dataType": "String",
+          "caption": "通知公告",
+          "xtype": "textarea",
+          "placeholder": "请输入通知公告"
+        },{
+          "name": "adminUser",
+          "dataType": "String",
+          "caption": "圈子管理员",
+          "xtype": "textarea",
+          "placeholder": "请输入圈子管理员,多个用','隔开"
+        },
+        {
+          "name": "logo",
+          "dataType": "String",
+          "caption": "图标",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的图标"
+        },
+        {
+          "name": "backgroundImg",
+          "dataType": "String",
+          "caption": "背景图",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的背景图"
+        }
+      ]
+    },{
+      "name": "editCircle",
+      "controls": [
+        {
+          "name": "circleId",
+          "dataType": "String",
+          "caption": "圈子编号",
+          "xtype": "text",
+          "required": true,
+          "readOnly": true
+        },
+        {
+          "name": "circleName",
+          "dataType": "String",
+          "caption": "圈子名称",
+          "xtype": "text",
+          "required": true,
+          "placeholder": "请输入圈子名称"
+        },
+        {
+          "name": "circleType",
+          "dataType": "String",
+          "caption": "圈子类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/circleType",
+          "placeholder": "请选择圈子类型"
+        },{
+          "name": "strutsType",
+          "dataType": "String",
+          "caption": "圈子构成关系",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/circleStrutsType",
+          "placeholder": "请选择圈子构成关系"
+        },
+        {
+          "name": "permissionsLimit",
+          "dataType": "String",
+          "caption": "权限类型",
+          "xtype": "radiolist",
+          "required": true,
+          "url": "/v2/syscodes/limit_type",
+          "placeholder": "请选择权限类型"
+        },
+        {
+          "name": "schoolLimit",
+          "dataType": "String",
+          "caption": "学校限制",
+          "xtype": "multi-select",
+          "required": true,
+          "hidden": true,
+          "url": "/v2/syscodes/group_limit",
+          "placeholder": "请选择学校限制"
+        },
+        {
+          "name": "isAnonymous",
+          "dataType": "String",
+          "caption": "是否允许匿名",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": false,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否允许匿名"
+        },{
+          "name": "isRealNamePost",
+          "dataType": "String",
+          "caption": "是否强制匿名发帖",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": false,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否强制匿名发帖"
+        },{
+          "name": "isRealNameRespond",
+          "dataType": "String",
+          "caption": "是否强制匿名回复",
+          "xtype": "radiolist",
+          "required": true,
+          "hidden": false,
+          "url": "/v2/syscodes/yn_state",
+          "placeholder": "请选择是否强制匿名回复"
+        },
+        {
+          "name": "posterGroupId",
+          "dataType": "String",
+          "caption": "关联广告位",
+          "xtype": "select",
+          "url": "/v2/group/getGroups?typeId=4",
+          "placeholder": "请选择关联广告位"
+        },
+        {
+          "name": "topMessages",
+          "dataType": "String",
+          "caption": "置顶消息",
+          "xtype": "textarea",
+          "placeholder": "请输入置顶消息"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序值",
+          "xtype": "text",
+          "placeholder": "请输入标签的排序值"
+        },
+        {
+          "name": "sortStrategy",
+          "dataType": "String",
+          "caption": "排序策略",
+          "xtype": "text",
+          "placeholder": ""
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "xtype": "textarea",
+          "placeholder": "请输入描述"
+        },{
+          "name": "notice",
+          "dataType": "String",
+          "caption": "通知公告",
+          "xtype": "textarea",
+          "placeholder": "请输入通知公告"
+        },{
+          "name": "adminUser",
+          "dataType": "String",
+          "caption": "圈子管理员",
+          "xtype": "textarea",
+          "placeholder": "请输入圈子管理员,多个用','隔开"
+        },
+        {
+          "name": "logo",
+          "dataType": "String",
+          "caption": "图标",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的图标"
+        },
+        {
+          "name": "backgroundImg",
+          "dataType": "String",
+          "caption": "背景图",
+          "xtype": "div",
+          "placeholder": "请上传虚拟组的背景图"
+        }
+      ]
+    }
+  ],
+  "routes": {},
+  "code": "0",
+  "datas": {}
+}

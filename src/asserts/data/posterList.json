@@ -1,0 +1,40 @@
+{
+  "code": "0",
+  "datas": {
+    "posterList": {
+      "pageNumber": 2,
+      "totalSize": 40,
+      "pageSize": 20,
+      "rows": [
+        {
+          "posterId": "8237054b-b4af-3a15-8bbc-ca4ce3968a21",
+          "posterTitle": "1重要通知重要通知重要通知重要通知重要通知重要通知",
+          "posterPhoto": "../img/123.png",
+          "posterType": "资讯推广",
+          "state": "1"
+        },
+        {
+          "posterId": "8237054b-b4af-3a15-8bbc-ca4ce3968a22",
+          "posterTitle": "2重要通知重要通知重要通知重要通知重要通知重要通知",
+          "posterPhoto": "../img/123.png",
+          "posterType": "纯广告",
+          "state": "1"
+        },
+        {
+          "posterId": "8237054b-b4af-3a15-8bbc-ca4ce3968a23",
+          "posterTitle": "3重要通知重要通知重要通知重要通知重要通知重要通知",
+          "posterPhoto": "../img/123.png",
+          "posterType": "资讯推广",
+          "state": "1"
+        },
+        {
+          "posterId": "8237054b-b4af-3a15-8bbc-ca4ce3968a24",
+          "posterTitle": "4重要通知重要通知重要通知重要通知重要通知重要通知",
+          "posterPhoto": "../img/123.png",
+          "posterType": "资讯推广",
+          "state": "1"
+        }
+      ]
+    }
+  }
+}

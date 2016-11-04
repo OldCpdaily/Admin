@@ -1,0 +1,54 @@
+{
+    "code": "0",
+    "datas": {
+        "contentList": {
+            "pageNumber": 1,
+            "totalSize": 40,
+            "pageSize": 2,
+            "rows": [
+                {
+                    "contentId": "1001",
+                    "title": "标题标题标题标题标题标题标题标题标题标题标题标题标题标题",
+                    "contentHtmlUrl": "http://www.baidu.com",
+                    "tags": "重要通知,标签2,标签3,标签4",
+                    "sourceAccount": "张三",
+                    "displayType": "视频",
+                    "readNum": 200,
+                    "commentNum": 300,
+                    "shareNum": 100,
+                    "createTime": "2016-05-05 12:12",
+                    "publishTime": "2016-05-06 12:12",
+                    "state": true
+                },
+                {
+                    "contentId": "1001",
+                    "title": "标题标题标题标题标题标题标题标题标题标题标题标题标题标题",
+                    "contentHtmlUrl": "http://www.baidu.com",
+                    "tags": "重要通知,标签2,标签3,标签4",
+                    "sourceAccount": "张三",
+                    "displayType": "视频",
+                    "readNum": 200,
+                    "commentNum": 300,
+                    "shareNum": 100,
+                    "createTime": "2016-05-05 12:12",
+                    "publishTime": "2016-05-06 12:12",
+                    "state": false
+                },
+                {
+                    "contentId": "1001",
+                    "title": "标题标题标题标题标题标题标题标题标题标题标题标题标题标题",
+                    "contentHtmlUrl": "http://www.baidu.com",
+                    "tags": "重要通知,标签2,标签3,标签4",
+                    "sourceAccount": "张三",
+                    "displayType": "视频",
+                    "readNum": 200,
+                    "commentNum": 300,
+                    "shareNum": 100,
+                    "createTime": "2016-05-05 12:12",
+                    "publishTime": "2016-05-06 12:12",
+                    "state": true
+                }
+            ]
+        }
+    }
+}

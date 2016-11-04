@@ -1,0 +1,376 @@
+@charset "utf-8";
+html, body{
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "PingFangSC-Regular", "sans-serif";
+}
+
+/*h5分享页面专用头尾  开始*/
+.top-container-next {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.top-box-next {
+    width: 100%;
+    max-width: 710px;
+    margin: 0 auto;
+    padding: 5px 0;
+    height: 40px;
+    background-color: rgba(0,0,0,.6);
+    color: #ffffff;
+}
+
+.icon-box-next {
+    float: left;
+    margin-right: 8px;
+    margin-left: 15px;
+}
+
+.icon-box-next img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.app-info-box-next {
+    float: left;
+}
+
+.app-info-box-next .app-name-next {
+    font-size: 15px;
+}
+
+.app-info-box-next .app-intro-next {
+    font-size: 13px;
+}
+
+.upload-box-next {
+    float: right;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+
+.upload-box-next a {
+    color: #ffffff;
+    background-color: rgb(251,75,60);
+    text-decoration: none;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "PingFangSC-Light", "sans-serif";
+}
+
+.close-box-next {
+    float: right;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+.close-box-next a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "PingFangSC-Ultralight", "sans-serif";
+}
+
+.bottom-container-next {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*position: relative;*/
+}
+
+.bottom-box-next {
+    position: relative;
+    width: 100%;
+    max-width: 710px;
+    margin: 0 auto;
+    height: 25px;
+    background-color: rgb(251,107,93);
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.bottom-box-next span {
+    color: #ffffff;
+    font-family: "PingFangSC-Light", "sans-serif";
+    font-size: 14px;
+}
+
+.bottom-box-next .arrow-next {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #ffffff;
+}
+
+/*h5分享页面样式结束*/
+
+
+.container {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto 0 auto;
+    /*padding-top: 50px;*/
+    /*min-height: -webkit-calc(100% - 25px);*/
+    /*min-height: calc(100% - 25px);*/
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.container-box {
+    height: 100%;
+    padding: 0 15px 10px 15px;
+}
+
+
+#container-next {
+    padding-bottom: 15px;
+}
+
+#container-next-iframe {
+    padding-top: 50px;
+}
+
+.container-box-iframe {
+    height: 100%;
+    width: 100%;
+    max-width: 740px;
+}
+
+.container-box-iframe iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 740px;
+}
+
+.container-box-iframe iframe body {
+    max-width: 740px;
+    width: 100%;
+}
+
+.container-box-iframe iframe body *{
+    max-width: 740px;
+}
+
+.info-title {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 15px 0;
+    color: #444444;
+}
+
+.info-content {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.75em;
+}
+
+.info-content p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info-content img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.info-content iframe {
+    text-align: center;
+}
+
+.info-content .video video,.info-content .video iframe {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.noVideo {
+    text-align: center;
+}
+
+.info-content a {
+    color: dodgerblue;
+}
+
+.info-content table {
+    /*border: 1px solid #e7e7eb;*/
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.75em;
+    font-size: 14px;
+    border-collapse: collapse;
+
+}
+
+.info-content table th {
+    /*border: 1px solid #e7e7eb;*/
+}
+
+.info-content table tr {
+    /*border: 1px solid #e7e7eb;*/
+}
+
+.info-content table td {
+    /*border: 1px solid #e7e7eb;*/
+}
+
+.info-content table td p {
+    margin-bottom: 0;
+}
+
+.info-content ul {
+    list-style:none;
+    margin:0 0 10px 0;
+    padding: 0;
+
+}
+
+.info-content ul li {
+    list-style-type: none;
+}
+
+.iframe-box {
+    text-align: center;
+}
+
+.info-video-iframe {
+    width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  一个有毛病的前端写的div的表格样式  */
+.css-contentlist.css-d-content {
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-bottom: none;
+}
+.css-title {
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: auto;
+    margin-bottom: 0!important;
+}
+.css-title li{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+}
+.css-title .css-id,.css-title .css-standid,.css-title .css-area  {
+    width: 10%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.css-title .css-name {
+    width: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.css-title .css-count {
+    width: 10%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.css-title .css-info {
+    width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-con {
+    width: 100%;
+    margin-bottom: 0!important;
+}
+.css-con > li{
+    height: 38px;
+    border-bottom: 1px solid #ddd;
+    line-height: 38px;
+    text-align: center;
+    clear: both;
+}
+.css-con .css-id,.css-con .css-standid,.css-con .css-area  {
+    width: 10%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+}
+.css-con .css-name {
+    width: 30%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+}
+.css-con .css-count {
+    width: 10%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+}
+.css-con .css-info {
+    width: 40%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+
+
+
+

@@ -1,0 +1,30 @@
+{
+    "code": "0",
+    "datas": {
+        "campusMediaList": {
+            "pageNumber": 1,
+            "totalSize": 40,
+            "pageSize": 2,
+            "rows": [
+                {
+                    "campusMediaId": "1001",
+                    "campusMediaLogo": "../img/123.png",
+                    "campusMediaName": "重要通知",
+                    "sourceType": "系统级",
+                    "organizationType": "123123",
+                    "createTime": "2016-05-05 12:12:12",
+                    "crawlerState": "用户昵称"
+                },
+                {
+                    "campusMediaId": "1001",
+                    "campusMediaLogo": "../img/123.png",
+                    "campusMediaName": "重要通知",
+                    "sourceType": "系统级",
+                    "organizationType": "123123",
+                    "createTime": "2016-05-05 12:12:12",
+                    "crawlerState": "用户昵称"
+                }
+            ]
+        }
+    }
+}

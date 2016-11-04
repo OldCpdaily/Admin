@@ -1,0 +1,849 @@
+{
+  "models": [
+    {
+      "name": "contentList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "标题",
+          "dataSize": 100,
+          "grid.width": "38%"
+        },
+        {
+          "name": "UUID",
+          "dataType": "String",
+          "caption": "UUID",
+          "dataSize": 40,
+          "hidden": true
+        },
+        {
+          "name": "contentHtmlUrl",
+          "dataType": "String",
+          "caption": "资讯预览地址",
+          "dataSize": 100,
+          "hidden": true
+        },
+        {
+          "name": "originTime",
+          "dataType": "String",
+          "caption": "原始发布时间",
+          "dataSize": 20,
+          "grid.width": "13%"
+        },
+        {
+          "name": "readNum",
+          "dataType": "int",
+          "caption": "阅读",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "source",
+          "dataType": "String",
+          "caption": "来源",
+          "dataSize": 40,
+          "grid.width": "13%"
+        },
+        {
+          "name": "category",
+          "dataType": "String",
+          "caption": "分类",
+          "dataSize": 40,
+          "grid.width": "8%"
+        },
+        {
+          "name": "displayType",
+          "dataType": "String",
+          "caption": "展现类型",
+          "dataSize": 20,
+          "hidden":true
+        },
+        {
+          "name": "homeRecommend",
+          "dataType": "boolean",
+          "caption": "头条",
+          "dataSize": 20,
+          "grid.width": "4%"
+        },
+        {
+          "name": "state",
+          "dataType": "boolean",
+          "caption": "状态",
+          "dataSize": 20,
+          "grid.width": "4%"
+        }
+      ]
+    },
+    {
+      "name": "sourceList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "mediaUUId",
+          "dataType": "String",
+          "caption": "媒体号UUID",
+          "dataSize": 40,
+          "hidden": true
+        },
+        {
+          "name": "headPhoto",
+          "dataType": "String",
+          "caption": "头像",
+          "dataSize": 20,
+          "grid.width": "5%"
+        },
+        {
+          "name": "mediaName",
+          "dataType": "String",
+          "caption": "名称",
+          "dataSize": 40,
+          "grid.width": "20%"
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "wxId",
+          "dataType": "String",
+          "caption": "ID",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "address",
+          "dataType": "String",
+          "caption": "地址",
+          "dataSize": 100,
+          "grid.width": "20%"
+        },
+        {
+          "name": "categoryId",
+          "dataType": "int",
+          "caption": "分类ID",
+          "dataSize": 20,
+          "hidden":true
+        },
+        {
+          "name": "category",
+          "dataType": "String",
+          "caption": "分类",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "crawlerState",
+          "dataType": "String",
+          "caption": "爬虫状态",
+          "dataSize": 20,
+          "grid.width": "10%"
+        }
+      ]
+    },
+    {
+      "name": "categoryList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "categoryId",
+          "dataType": "String",
+          "caption": "分类UUID",
+          "dataSize": 40,
+          "grid.width": "25%"
+        },
+        {
+          "name": "categoryName",
+          "dataType": "String",
+          "caption": "分类名称",
+          "dataSize": 40,
+          "grid.width": "20%"
+        },
+        {
+          "name": "categoryDescription",
+          "dataType": "String",
+          "caption": "分类描述",
+          "dataSize": 40,
+          "grid.width": "20%"
+        },
+        {
+          "name": "categoryDisplayType",
+          "dataType": "String",
+          "caption": "类型",
+          "dataSize": 20,
+          "grid.width": "10%"
+        }
+      ]
+    },
+    {
+      "name": "posterList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "posterId",
+          "dataType": "String",
+          "caption": "海报id",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "posterTitle",
+          "dataType": "String",
+          "caption": "海报标题",
+          "dataSize": 80,
+          "grid.width": "35%"
+        },
+        {
+          "name": "posterPhoto",
+          "dataType": "String",
+          "caption": "海报图片",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "posterType",
+          "dataType": "String",
+          "caption": "海报类型",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "state",
+          "dataType": "String",
+          "caption": "展示状态",
+          "dataSize": 20,
+          "grid.width": "10%"
+        }
+      ]
+    },
+    {
+      "name": "sysTypeList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "value",
+          "dataType": "String",
+          "caption": "类型值",
+          "dataSize": 20,
+          "grid.width": "20%"
+        },
+        {
+          "name": "display",
+          "dataType": "String",
+          "caption": "类型显示值",
+          "dataSize": 20,
+          "grid.width": "20%"
+        },
+        {
+          "name": "typeId",
+          "dataType": "String",
+          "caption": "所属类型编号",
+          "dataSize": 20,
+          "grid.width": "20%"
+        },
+        {
+          "name": "typeName",
+          "dataType": "String",
+          "caption": "所属类型名称",
+          "dataSize": 20,
+          "grid.width": "20%"
+        }
+      ]
+    },
+    {
+      "name": "tagList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "tagId",
+          "dataType": "String",
+          "caption": "标签编号",
+          "dataSize": 20,
+          "grid.width": "8%"
+        },
+        {
+          "name": "tagName",
+          "dataType": "String",
+          "caption": "标签名称",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "tagType",
+          "dataType": "String",
+          "caption": "标签类型",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "tagLevel",
+          "dataType": "String",
+          "caption": "标签级别",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "contentNum",
+          "dataType": "String",
+          "caption": "内容数量",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "enabled",
+          "dataType": "String",
+          "caption": "启用状态",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "isShown",
+          "dataType": "String",
+          "caption": "是否显示",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "createTime",
+          "dataType": "String",
+          "caption": "创建时间",
+          "dataSize": 20,
+          "grid.width": "13%"
+        },
+        {
+          "name": "createUser",
+          "dataType": "String",
+          "caption": "创建用户",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "updateTime",
+          "dataType": "String",
+          "caption": "更新时间",
+          "dataSize": 20,
+          "grid.width": "13%"
+        }
+      ]
+    },
+    {
+      "name": "contentList_new",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "标题",
+          "dataSize": 100,
+          "grid.width": "20%"
+        },
+        {
+          "name": "contentHtmlUrl",
+          "dataType": "String",
+          "caption": "内容预览地址",
+          "dataSize": 20,
+          "hidden": true
+        },
+        {
+          "name": "contentId",
+          "dataType": "String",
+          "caption": "内容编号",
+          "dataSize": 40,
+          "hidden": true
+        },
+        {
+          "name": "contentType",
+          "dataType": "String",
+          "caption": "内容类型",
+          "dataSize": 40,
+          "hidden": true
+        },
+        {
+          "name": "tags",
+          "dataType": "String",
+          "caption": "标签集合",
+          "dataSize": 100,
+          "grid.width": "13%"
+        },
+        {
+          "name": "sourceAccount",
+          "dataType": "String",
+          "caption": "来源账号",
+          "dataSize": 20,
+          "grid.width": "8%"
+        },
+        {
+          "name": "displayType",
+          "dataType": "String",
+          "caption": "展现类型",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "readNum",
+          "dataType": "int",
+          "caption": "阅读数",
+          "dataSize": 40,
+          "grid.width": "5%"
+        },
+        {
+          "name": "commentNum",
+          "dataType": "String",
+          "caption": "评论数",
+          "dataSize": 20,
+          "grid.width": "5%"
+        },
+        {
+          "name": "shareNum",
+          "dataType": "int",
+          "caption": "分享数",
+          "dataSize": 20,
+          "grid.width": "5%"
+        },
+        {
+          "name": "createTime",
+          "dataType": "String",
+          "caption": "创建时间",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "publishTime",
+          "dataType": "String",
+          "caption": "发布时间",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "state",
+          "dataType": "String",
+          "caption": "状态",
+          "dataSize": 20,
+          "grid.width": "4%"
+        }
+      ]
+    },
+    {
+      "name": "groupList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "groupId",
+          "dataType": "String",
+          "caption": "组编号",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "groupName",
+          "dataType": "String",
+          "caption": "组名称",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "groupType",
+          "dataType": "String",
+          "caption": "组类型",
+          "dataSize": 40,
+          "grid.width": "6%"
+        },
+        {
+          "name": "contentTypeLimit",
+          "dataType": "String",
+          "caption": "内容类型限制",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "tagLimit",
+          "dataType": "String",
+          "caption": "标签限制",
+          "dataSize": 40,
+          "grid.width": "19%"
+        },
+        {
+          "name": "permissionsLimit",
+          "dataType": "String",
+          "caption": "权限限制",
+          "dataSize": 40,
+          "grid.width": "12%"
+        },
+        {
+          "name": "aggregationGroup",
+          "dataType": "String",
+          "caption": "聚合组",
+          "dataSize": 40,
+          "grid.width": "6%",
+          "hidden": true
+        },
+        {
+          "name": "startTime",
+          "dataType": "String",
+          "caption": "开始时间",
+          "dataSize": 20,
+          "grid.width": "12%",
+          "hidden": true
+        },
+        {
+          "name": "endTime",
+          "dataType": "String",
+          "caption": "结束时间",
+          "dataSize": 20,
+          "grid.width": "12%",
+          "hidden": true
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序值",
+          "dataSize": 20,
+          "grid.width": "5%"
+        },
+        {
+          "name": "description",
+          "dataType": "String",
+          "caption": "描述",
+          "dataSize": 20,
+          "grid.width": "15%"
+        }
+      ]
+    },
+    {
+      "name": "campusMediaList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "campusMediaId",
+          "dataType": "String",
+          "caption": "编号",
+          "dataSize": 40,
+          "grid.width": "14%"
+        },
+        {
+          "name": "source",
+          "dataType": "String",
+          "caption": "来源地址/微信ID",
+          "dataSize": 40,
+          "hidden": true
+        },
+        {
+          "name": "campusMediaLogo",
+          "dataType": "String",
+          "caption": "图标",
+          "dataSize": 40,
+          "grid.width": "6%"
+        },
+        {
+          "name": "campusMediaName",
+          "dataType": "String",
+          "caption": "名称",
+          "dataSize": 40,
+          "grid.width": "16%"
+        },
+        {
+          "name": "college",
+          "dataType": "String",
+          "caption": "所属学校",
+          "dataSize": 20,
+          "grid.width": "14%"
+        },
+        {
+          "name": "sourceType",
+          "dataType": "String",
+          "caption": "来源类型",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "organizationType",
+          "dataType": "String",
+          "caption": "组织类型",
+          "dataSize": 40,
+          "grid.width": "9%"
+        },
+        {
+          "name": "lastUpdateTime",
+          "dataType": "String",
+          "caption": "爬虫最后更新时间",
+          "dataSize": 40,
+          "grid.width": "14%"
+        },
+        {
+          "name": "crawlerState",
+          "dataType": "String",
+          "caption": "爬虫状态",
+          "dataSize": 40,
+          "grid.width": "6%"
+        }
+      ]
+    },
+    {
+      "name": "luckyDrawList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "luckyDrawId",
+          "dataType": "String",
+          "caption": "抽奖编号",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "luckyDrawTitle",
+          "dataType": "String",
+          "caption": "抽奖标题",
+          "dataSize": 20,
+          "grid.width": "20%"
+        },
+        {
+          "name": "contentId",
+          "dataType": "String",
+          "caption": "关联内容ID",
+          "dataSize": 20,
+          "grid.width": "15%"
+        },
+        {
+          "name": "endTime",
+          "dataType": "String",
+          "caption": "结束时间",
+          "dataSize": 20,
+          "grid.width": "15%"
+        },
+        {
+          "name": "luckyDrawUrl",
+          "dataType": "String",
+          "caption": "抽奖Url",
+          "dataSize": 20,
+          "grid.width": "15%"
+        },
+        {
+          "name": "winUrl",
+          "dataType": "String",
+          "caption": "中奖Url",
+          "dataSize": 20,
+          "grid.width": "15%"
+        }
+      ]
+    },
+    {
+      "name": "pushRecordList",
+      "url": "",
+      "controls": [
+        {
+          "name": "pushId",
+          "dataType": "String",
+          "caption": "推送编号",
+          "dataSize": 20,
+          "hidden": true
+        },
+        {
+          "name": "title",
+          "dataType": "String",
+          "caption": "通知标题",
+          "dataSize": 20,
+          "grid.width": "22%"
+        },
+        {
+          "name": "alterContent",
+          "dataType": "String",
+          "caption": "通知内容",
+          "dataSize": 20,
+          "grid.width": "22%"
+        },
+        {
+          "name": "platform",
+          "dataType": "String",
+          "caption": "推送平台",
+          "dataSize": 20,
+          "grid.width": "7%"
+        },
+        {
+          "name": "audienceType",
+          "dataType": "String",
+          "caption": "推送类型",
+          "dataSize": 20,
+          "grid.width": "7%"
+        },
+        {
+          "name": "cTime",
+          "dataType": "String",
+          "caption": "创建时间",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "pushTime",
+          "dataType": "String",
+          "caption": "推送时间",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "status",
+          "dataType": "String",
+          "caption": "推送状态",
+          "dataSize": 20,
+          "grid.width": "7%"
+        }
+      ]
+    },
+    {
+      "name": "userList",
+      "url": "",
+      "controls": [
+        {
+          "name": "userId",
+          "dataType": "String",
+          "caption": "用户编号",
+          "dataSize": 20,
+          "grid.width": "24%"
+        },
+        {
+          "name": "userAlice",
+          "dataType": "String",
+          "caption": "昵称",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "userName",
+          "dataType": "String",
+          "caption": "姓名",
+          "dataSize": 20,
+          "grid.width": "7%"
+        },
+        {
+          "name": "school",
+          "dataType": "String",
+          "caption": "所在学校",
+          "dataSize": 20,
+          "grid.width": "10%"
+        },
+        {
+          "name": "academy",
+          "dataType": "String",
+          "caption": "所在学院",
+          "dataSize": 20,
+          "grid.width": "7%"
+        },
+        {
+          "name": "sex",
+          "dataType": "String",
+          "caption": "性别",
+          "dataSize": 20,
+          "grid.width": "4%"
+        },
+        {
+          "name": "userTag",
+          "dataType": "String",
+          "caption": "用户标签",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "registerTime",
+          "dataType": "String",
+          "caption": "注册时间",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "lastLoginTime",
+          "dataType": "String",
+          "caption": "最后登录时间",
+          "dataSize": 20,
+          "grid.width": "11%"
+        },
+        {
+          "name": "isAnonymousUser",
+          "dataType": "String",
+          "caption": "是否匿名",
+          "dataSize": 20,
+          "grid.width": "6%"
+        },
+        {
+          "name": "userStatus",
+          "dataType": "String",
+          "caption": "用户状态",
+          "dataSize": 20,
+          "grid.width": "6%"
+        }
+      ]
+    },{
+      "name": "circleList",
+      "url": "http://res.wisedu.com/fe_components/mock/table.json",
+      "controls": [
+        {
+          "name": "circleId",
+          "dataType": "String",
+          "caption": "圈子编号",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "circleName",
+          "dataType": "String",
+          "caption": "圈子名称",
+          "dataSize": 40,
+          "grid.width": "10%"
+        },
+        {
+          "name": "circleType",
+          "dataType": "String",
+          "caption": "圈子类型",
+          "dataSize": 40,
+          "grid.width": "8%"
+        },
+        {
+          "name": "strutsType",
+          "dataType": "圈子构成关系",
+          "caption": "内容类型限制",
+          "dataSize": 20,
+          "grid.width": "8%"
+        },{
+          "name": "schoolLimit",
+          "dataType": "String",
+          "caption": "权限限制",
+          "dataSize": 180,
+          "grid.width": "20%"
+        },
+        {
+          "name": "isAnonymous",
+          "dataType": "String",
+          "caption": "是否允许匿名",
+          "dataSize": 5,
+          "grid.width": "8%"
+        },
+        {
+          "name": "isRealNamePost",
+          "dataType": "String",
+          "caption": "是否强制实名制发帖",
+          "dataSize": 5,
+          "grid.width": "10%"
+        },
+        {
+          "name": "isRealNameRespond",
+          "dataType": "String",
+          "caption": "是否强制实名制回复",
+          "dataSize": 5,
+          "grid.width": "10%"
+        },
+        {
+          "name": "sortNum",
+          "dataType": "String",
+          "caption": "排序号",
+          "dataSize": 5,
+          "grid.width": "5%"
+        }
+      ]
+    }
+  ],
+  "routes": {},
+  "code": "0",
+  "datas": {}
+}
