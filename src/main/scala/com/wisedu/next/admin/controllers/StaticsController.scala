@@ -22,7 +22,7 @@ class StaticsController extends Controller {
       if (request.params("*").contains(".html")) {
         response.ok.file(request.params("*"))
       } else {
-        response.ok.header("Cache-Control", "max-age=259200").file(request.params("*"))
+        response.ok.header("Cache-Control", "max-age=259200").header("Access-Control-Allow-Origin", "*").file(request.params("*"))
       }
 
     }
